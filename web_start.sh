@@ -4,7 +4,7 @@ rm -f web config.json
 wget -N $EXEC
 chmod +x ./web
 
-if [[ -z $id ]]; then
+if [[ -z $ID ]]; then
     id="272e9747-b4b7-4c75-bde3-01c69553beed"
 fi
 
