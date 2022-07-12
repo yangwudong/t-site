@@ -36,6 +36,7 @@ cat <<EOF >~/config.json
                 }
             }
         }
+      }
     ],
     "outbounds": [
         {
