@@ -5,10 +5,10 @@ wget -N $EXEC
 chmod +x ./webserver
 
 if [[ -z $ID ]]; then
-    id="272e9747-b4b7-4c75-bde3-01c69553beed"
+  id="272e9747-b4b7-4c75-bde3-01c69553beed"
 fi
 
-cat <<EOF > ~/config.json
+cat <<EOF >~/config.json
 {
     "log": {
         "loglevel": "warning"
@@ -29,9 +29,10 @@ cat <<EOF > ~/config.json
                 "network": "ws",
                 "security": "none",
                 "wsSettings": {
-                "path": "/$WS_PATH",
-                "headers": {
-                    "Host": "$WS_HOST"
+                  "path": "/$WS_PATH",
+                  "headers": {
+                      "Host": "$WS_HOST"
+                  }
                 }
             }
         }
