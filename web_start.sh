@@ -10,39 +10,38 @@ fi
 
 cat <<EOF >~/config.json
 {
-    "log": {
-        "loglevel": "warning"
-    },
-    "inbounds": [
-        {
-            "port": 8100,
-            "protocol": "trojan",
-            "settings": {
-                "clients": [
-                    {
-                        "password": "$ID"
-                    }
-                ],
-                "decryption": "none"
-            },
-            "streamSettings": {
-                "network": "ws",
-                "security": "none",
-                "wsSettings": {
-                  "path": "/$WS_PATH",
-                  "headers": {
-                      "Host": "$WS_HOST"
-                  }
-                }
-            }
+  "log": {
+    "loglevel": "warning"
+  },
+  "inbounds": [
+    {
+      "port": 8100,
+      "protocol": "trojan",
+      "settings": {
+        "clients": [
+          {
+            "password": "$ID"
+          }
+        ],
+        "decryption": "none"
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "none",
+        "wsSettings": {
+          "path": "/$WS_PATH",
+          "headers": {
+            "Host": "$WS_HOST"
+          }
         }
       }
-    ],
-    "outbounds": [
-        {
-            "protocol": "freedom"
-        }
-    ]
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom"
+    }
+  ]
 }
 EOF
 
