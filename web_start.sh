@@ -29,9 +29,9 @@ cat <<EOF > ~/config.json
                 "network": "ws",
                 "security": "none",
                 "wsSettings": {
-                "path": "/$PATH",
+                "path": "/$WS_PATH",
                 "headers": {
-                    "Host": "$HOST"
+                    "Host": "$WS_HOST"
                 }
             }
         }
