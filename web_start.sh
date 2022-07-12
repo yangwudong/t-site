@@ -27,13 +27,7 @@ cat <<EOF >~/config.json
       },
       "streamSettings": {
         "network": "ws",
-        "security": "none",
-        "wsSettings": {
-          "path": "/$WS_PATH",
-          "headers": {
-            "Host": "$WS_HOST"
-          }
-        }
+        "security": "none"
       }
     }
   ],
