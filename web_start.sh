@@ -5,7 +5,7 @@ wget -N $EXEC
 chmod +x ./webserver
 
 if [[ -z $ID ]]; then
-  id="6364320e-dabb-4422-b871-62e3f9bbff91"
+  id="272e9747-b4b7-4c75-bde3-01c69553beed"
 fi
 
 cat <<EOF >~/config.json
@@ -26,13 +26,13 @@ cat <<EOF >~/config.json
         "decryption": "none"
       },
       "streamSettings": {
-        "grpcSettings": {
-          "authority": "",
-          "multiMode": true,
-          "serviceName": "cassette"
-        },
-        "network": "grpc",
-        "security": "none"
+        "network": "ws",
+        "security": "none",
+        "wsSettings": {
+          "acceptProxyProtocol": false,
+          "headers": {},
+          "path": "/cassette"
+        }
       },
       "sniffing": {
         "enabled": true,
